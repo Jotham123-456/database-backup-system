@@ -1,0 +1,6 @@
+{
+    "schedule": "0 * * * *",
+    "databases": [
+        "postgresql://postgres:Jotham%400819@localhost:5432/shopdb"
+    ]
+}
