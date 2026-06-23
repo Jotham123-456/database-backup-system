@@ -8,20 +8,14 @@ function loadConfig() {
     const configData = fs.readFileSync(configPath, "utf8");
     const config = JSON.parse(configData);
 
-    // Inject MongoDB Atlas from environment (if available)
-    if (process.env.MONGO_URI) {
-        config.databases = config.databases || [];
+    // load DB registry
+    const dbPath = path.join(process.cwd(), "src/data/databases.json");
 
-        // config.databases.push(process.env.MONGO_URI);
-        if (process.env.MONGO_URI) {
-            config.databases = config.databases || [];
+    if (fs.existsSync(dbPath)) {
+        const dbData = JSON.parse(fs.readFileSync(dbPath, "utf8"));
 
-            const exists = config.databases.includes(process.env.MONGO_URI);
-
-            if (!exists) {
-                config.databases.push(process.env.MONGO_URI);
-            }
-        }
+        config.databases = dbData.map(db => db.url);
+        config.dbRegistry = dbData; // keep metadata too
     }
 
     return config;

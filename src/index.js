@@ -111,6 +111,18 @@ async function runBackup() {
         duration: `${duration}ms`,
       });
 
+      const history = require("./utils/history");
+
+history.add({
+    database: info.databaseName,
+    type: info.type,
+    status: "SUCCESS",
+    size: `${sizeMB} MB`,
+    location: uploadResult.path,
+    duration: `${duration}ms`,
+    timestamp: new Date().toISOString()
+});
+
       log(`Backup success: ${info.databaseName}`, "SUCCESS");
 
     } catch (error) {
@@ -123,6 +135,16 @@ async function runBackup() {
         databaseType: info.type,
         error,
       });
+
+      const history = require("./utils/history");
+
+history.add({
+    database: info.databaseName,
+    type: info.type,
+    status: "FAILED",
+    error: error.message,
+    timestamp: new Date().toISOString()
+});
     }
   }
 }

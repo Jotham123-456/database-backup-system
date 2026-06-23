@@ -1,5 +1,25 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Environment variables
 .env
-backups
-logs
+
+# Backup files
+backups/
+*.sql
+*.archive
+
+# Logs
+logs/
+*.log
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Build output
+frontend/dist/
+frontend/node_modules/
+
+# IDE
+.vscode/

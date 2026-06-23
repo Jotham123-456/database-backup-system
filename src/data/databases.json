@@ -1,0 +1,25 @@
+[
+  {
+    "name": "shopdb",
+    "type": "postgresql",
+    "url": "postgresql://postgres:Jotham%400819@localhost:5432/shopdb"
+  },
+  {
+    "name": "pg_test2",
+    "slug": "pg_test2",
+    "type": "postgresql",
+    "url": "postgresql://neondb_owner:npg_5oy2zjNeCiaQ@ep-hidden-hat-atg6l0iz-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+  },
+  {
+    "name": "pg_test3",
+    "slug": "pg_test3",
+    "type": "postgresql",
+    "url": "postgresql://neondb_owner:npg_5oy2zjNeCiaQ@ep-hidden-hat-atg6l0iz-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+  },
+  {
+    "name": "pg_test4",
+    "slug": "pg_test4",
+    "type": "postgresql",
+    "url": "postgresql://neondb_owner:npg_5oy2zjNeCiaQ@ep-hidden-hat-atg6l0iz-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+  }
+]
