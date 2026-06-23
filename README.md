@@ -94,4 +94,4 @@ Rotate MongoDB and Supabase keys if leaked
 Use App Passwords for Gmail
 📌 Author
 
-Built by Jewel as a DevOps automation project.
+Built by Jotham as a DevOps automation project.
